@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 #from msilib.schema import Environment, Media
 import os
 import dj_database_url
+from pathlib import Path
 
 from django.contrib.messages import constants as mensajes_de_error
 
@@ -166,6 +167,11 @@ MESSAGE_TAGS={
 ENVIRONMENT= os.getenv("ENVIRONMENT")
 if ENVIRONMENT== "development":
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+    
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
     
 
