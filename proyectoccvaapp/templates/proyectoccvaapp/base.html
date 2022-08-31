@@ -1,0 +1,158 @@
+<html>
+
+<head>
+
+   {% load static  %}
+
+
+
+    <!-- Bootstrap -->
+    <link href="{% static 'proyectoccvaapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+
+    <!-- Styles -->
+    <link href="{% static 'proyectoccvaapp/css/gestion.css' %}" rel="stylesheet">
+</head>
+
+<!-- Clima -->
+<body>     
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'proyectoccvaapp/img/mibarraccva.jpg' %}" alt="">
+     
+      <div> 
+        <a class="weatherwidget-io" href="https://forecast7.com/es/n27d58n60d71/villa-angela/" data-label_1="Villa Ángela" data-label_2="Chaco" data-theme="original" >Villa Ángela Chaco</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>   </div>
+
+    </body>
+        <span class="site-heading-lower"></span>
+      </h3>
+
+
+
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Gestión de Pedidos</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item {% if request.path == '/' %}
+          active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
+          </li>
+          <li class="nav-item {% if request.path == '/quienessomos/' %}
+          active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'QuienesSomos'  %}">quienes somos</a>
+          </li>
+
+    
+          <li class="nav-item {% if request.path|slice:':10' == '/noticias/' %}
+          active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Noticias'  %}">noticias</a>
+          </li>
+          <li class="nav-item {% if request.path == '/cursos/' %}
+          active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'cursos' %}">cursos  y  capacitaciones</a>
+          </li>
+
+          <li class="nav-item {% if request.path == '/contacto/' %}
+          active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto'  %}">contacto</a>
+          </li>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              
+             
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Ingresar búsqueda" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              
+      <div style="text-align: right; margin-right: 100px; color: white;">
+      {% if user.is_authenticated %}
+
+      Hola! {{ user.username }}  &nbsp; &nbsp;<a href="{% url 'cerrar_sesion' %}" style="color: white; ">Cerrar sesión</a>
+
+      {% else %}
+
+      
+      <a href="{% url 'logear' %}" style="color: white;" >Logueo</a> &nbsp;<a href="{% url 'Logueo' %}" style="color: white; ">Registro </a>
+
+
+      {% endif %}
+      
+      
+      </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+<!-- Contenido Cambiante -->
+{%  block content  %}
+
+
+
+
+
+
+
+{%  endblock %}
+
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	    </p>
+        <p class="m-0 mbt">
+        	<a href="#" class="link">Camara de Comercio de Vila Angela</a> ·
+
+	
+
+    <!-- Bootstrap -->
+    <script src="{% static 'proyectoccvaapp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'proyectoccvaapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+
+</html>

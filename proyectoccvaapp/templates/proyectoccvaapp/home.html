@@ -1,0 +1,192 @@
+
+
+    {% extends "proyectoccvaapp/base.html" %}
+
+    {% load static %}
+
+
+    {% block content %}
+
+    
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+            <!-- Fondo (verde Home) page 1 -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	    </p>
+        <p class="m-0 mbt">
+        	<a href="https://www.redcame.org.ar/" class="link">  ¡Conocemos un poco mas!</a> ·
+
+
+
+
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'proyectoccvaapp/img/principal.jpg' %}" alt="">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <section class="page-section clearfix">
+          <div class="container">
+            <div class="intro">
+              <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4" >
+                  <span class="section-heading-lower">Bienvenido</span>
+                  <span class="section-heading-upper">Somos la camara de comercio de Villa Angela</span>
+                </h2>
+                <p class="mb-3">
+                  Institución creada el 08/11/1945, con actividad gremial empresaria y comunitaria, integrante de FECHACO, adherida a CAME y CAC.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          </section>
+
+
+        
+        <section class="page-section clearfix">
+          <div class="container">
+            <div class="intro">
+              <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'proyectoccvaapp/img/ccva fron2.jpg' %}" alt="">
+       
+      
+              <section class="page-section clearfix">
+                <div class="container">
+                  <div class="intro">
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                      <h2 class="section-heading mb-4" >
+                        <span class="section-heading-upper">Misión</span>
+                      </h2>
+                      <p class="mb-3">
+                        
+                        
+Representar, promover y defender los intereses generales del Comercio y la Industria. Participar activamente en el desarrollo económico y empresarial. Liderar la creación, consolidación y desarrollo de las empresas.
+
+                      </p>
+                     
+                    </div>
+                  </div>
+                </div>
+                     
+                </section>
+
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <h1>Ultimas Noticas</h1>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <span class="section-heading-upper">
+      
+           <!-- Fondo (verde Home) page 1 -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	    </p>
+        <p class="m-0 mbt">
+        	<a href="https://www.redcame.org.ar/" class="link" style="color: white;"> Ver mas noticas</a> ·
+          <!-- post -->
+          <section class="page-section clearfix">
+             <div class="container">
+               <div class="intro">
+                 <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{Post.imagen.url}}" alt="" style="width:50%;">
+                 <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                   <h2 class="section-heading mb-4" >
+                     <span class="section-heading-lower; font-size: 0.2em;">{{Post.titulo}}</span>
+                     <span class="section-heading-upper"></span>
+                    </h2>
+                    <p class="mb-3">
+                      {{Post.contenido}}                     </h2>
+
+                   <div style="text-align: left; font-size: 0.8em;">
+                   Autor:{{Post.autor}}
+                   </div>
+       
+                 </div>
+               </div>
+             </div>
+           </section>
+           <!-- <section class="page-section clearfix">
+            <div class="container">
+              <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{Curso.imagen.url}}" alt="" style="width:50%;">
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                  <h2 class="section-heading mb-4" >
+                    <span class="section-heading-lower; font-size: 0.2em;">{{Curso.titulo}}</span>
+                    <span class="section-heading-upper"></span>
+                   </h2>
+                   <p class="mb-3">
+                     {{Curso.contenido}}                     </h2>
+
+                  <div style="text-align: left; font-size: 0.8em;">
+                  Autor:{{Curso.autor}}
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </section>-->
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+{% endblock %}
